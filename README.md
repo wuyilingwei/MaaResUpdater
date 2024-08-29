@@ -14,7 +14,7 @@
 
 ## 另，Cloudflare Worker镜像项目
 
-通过Cloudflare+自带域名实现稳定github访问。采用直接下载设计，以减少按次计算的限制。单个账号日免费100'000次Worker请求
+通过Cloudflare+自带域名实现稳定github访问。采用直接下载设计，以减少按次计算的限制（1次/每次更新）。单个账号日免费100'000次Worker请求
 
 用户 - 自带域名 - Cloudflare Workers(Worker - github)
 
