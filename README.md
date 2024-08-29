@@ -10,7 +10,7 @@
 
 下载：[Github](https://raw.githubusercontent.com/wuyilingwei/MaaResUpdater/main/MAAResUpdater.bat)，[个人网盘](pan.wuyilingwei.com/api/MAAResUpdater.bat)
 
-最早发布于2024-08-15，B站视频https://www.bilibili.com/video/BV13w4m1k7j3/评论区。简单快速手搓项目，可能异常处理不完善。
+最早发布于2024-08-15，B站视频 https://www.bilibili.com/video/BV13w4m1k7j3/ 评论区。简单快速手搓项目，可能异常处理不完善。
 
 ## 另，Cloudflare Worker镜像项目
 
