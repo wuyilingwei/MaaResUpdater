@@ -1,8 +1,8 @@
 @ECHO OFF
 title MAAResUpdater By wuyilingwei
 color 0A
-:: ver 0.1.3
-:: Release Date: 2024/08/19
+:: ver 0.2.0
+:: Release Date: 2024/08/29
 :: Preset Url: GitHub; Personal Minnor Wuyilingwei Server
 
 :: dir check
@@ -12,10 +12,18 @@ if not exist MAA.exe (
     exit 3
 )
 
-:: bypass url check
-:: set url="Put your url here"
-:: goto download
-echo [NOTICE] Minimal Windows Version require Windows10, higher than 1803 (or curl and tar avaliable).
+:: Windows Version Check
+if not exist %windir%\System32\curl.exe (
+    echo [ERROR] Cannot find curl.exe, please install curl or use Windows10 1803 or higher.
+    pause
+    exit 4
+)
+if not exist %windir%\System32\tar.exe (
+    echo [ERROR] Cannot find tar.exe, please install tar or use Windows10 1803 or higher.
+    pause
+    exit 4
+)
+
 echo [INFO] Testing internet connection...
 ping github.com -n 2 -w 1000 > nul
 if not errorlevel 0 (
@@ -39,6 +47,7 @@ set /p url=[INFO] URL:
 
 :download
 echo [INFO] Downloading resource pack form %url%...
+del /q MAAResource.zip > nul
 set errorlevel=0
 curl -L -o MAAResource.zip %url%
 if not errorlevel 0 (
@@ -80,5 +89,7 @@ change Log
 0.1.2 Fix Preset Url Check Problem.
 
 0.1.3 Add Auto Start MAA.exe
+
+0.2.0 Add Self Update & Better Windows Version Check
 
 :: ---
