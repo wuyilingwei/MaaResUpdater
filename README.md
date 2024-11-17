@@ -2,7 +2,7 @@
 
 ## Maa资源更新程序
 
-仅支持Win10 1703+的版本，curl和tar命令在此版本中加入windows
+仅支持Win10 1803+的版本，curl和tar命令在此版本中加入windows
 
 采用无额外支持库设计，全部命令均由windows自带支持，不需要其他exe/dll。
 
